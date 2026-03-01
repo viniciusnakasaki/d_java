@@ -1,0 +1,8 @@
+package snippet;
+
+public class Snippet {
+	public static void main(String[] args) {
+		System.out.printf("FINAL GRADE = %.2f%n", grad.finalGrade());
+	}
+}
+

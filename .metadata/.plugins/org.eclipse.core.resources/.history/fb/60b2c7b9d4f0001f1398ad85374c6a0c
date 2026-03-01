@@ -1,0 +1,42 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("How many numbers will you enter?");
+		int n = sc.nextInt();
+
+		double[] vect = new double[n];
+		
+		for (int i = 0; i < vect.length; i++) {
+			System.out.println("Enter a number: ");
+			vect[i] = sc.nextDouble();
+		}
+		
+		System.out.print("VALORES = ");
+        for (int i = 0; i < vect.length; i++) {
+            System.out.printf("%.2f ", vect[i]); 
+        }
+		
+        double sum = 0.0;
+        for (int i = 0; i < vect.length; i++) {
+            sum += vect[i];        
+        }
+        double average = sum / n;
+                
+        System.out.println();
+        System.out.printf("Sum = %.2f", sum);
+        System.out.printf("Average = %.2f", average);
+               
+		sc.close();
+
+	}
+
+}
